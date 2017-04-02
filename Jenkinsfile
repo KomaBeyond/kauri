@@ -1,10 +1,15 @@
 pipeline {
-    agent { docker 'php' }
+    agent any
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'php --version'
-		sh 'env'
+                sh 'printenv'
             }
         }
     }
