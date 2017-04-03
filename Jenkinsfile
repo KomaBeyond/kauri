@@ -1,10 +1,17 @@
 pipeline {
-    agent any
+    agent { docker 'nginx' }
 
     stages {
+	stage('Preparation') {
+	    steps {
+	    	echo 'Preparation...'
+	    }
+	}
+
         stage('Build') {
             steps {
                 echo 'Building..'
+		sh 'nginx --version'
             }
         }
 
@@ -19,5 +26,11 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+
+	stage('Results') {
+	    steps {
+		echo 'Result....'	 
+	    }
+	}
     }
 }
