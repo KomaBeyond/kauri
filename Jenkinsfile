@@ -59,9 +59,6 @@ pipeline {
     post {
 	always {
 	    echo 'this will always run'
-	    mail to: 'komazhang@foxmail.com',
-	         subject: "send from pipeline: ${currentBuild.fullDisplayName}",
-		 body: "something is wrong: ${env.BUILD_URL}"
 	}
 
 	success {
