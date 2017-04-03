@@ -1,8 +1,5 @@
 pipeline {
-    agent any
-    tools {
-	docker '1.13.1' 
-    }
+    agent { docker 'nginx' }
 
     stages {
 	stage('Preparation') {
