@@ -34,11 +34,11 @@ pipeline {
 	
     	    post {
     	        always {
-    	            echo 'This will always run'
+    	            echo 'stage - This will always run'
     	        }
 
     	        success {
-    	            echo 'This will run only if successful'
+    	            echo 'stage - This will run only if successful'
     	        }
 
     	        failure {
