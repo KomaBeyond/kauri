@@ -1,5 +1,7 @@
 pipeline {
-    agent any 
+    agent {
+	docker {image 'docker-lnp:latest'}	
+    } 
 
     stages {
 	stage('Preparation') {
@@ -17,6 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+		sh 'php --version'
             }
         }
 
