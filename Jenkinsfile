@@ -1,5 +1,6 @@
 pipeline {
-    agent { docker 'nginx' }
+    agent any
+    tools { docker }
 
     stages {
 	stage('Preparation') {
