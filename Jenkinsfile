@@ -1,11 +1,11 @@
 pipeline {
     agent any
+    tool name: docker
 
     stages {
 	stage('Preparation') {
 	    steps {
 	    	echo 'Preparation...'
-		sh 'bundle install'
 	    }
 	}
 
