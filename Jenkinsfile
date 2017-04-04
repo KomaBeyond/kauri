@@ -5,6 +5,7 @@ pipeline {
 	stage('Preparation') {
 	    steps {
 	    	echo 'Preparation...'
+		sh 'bundle install'
 	    }
 	}
 
