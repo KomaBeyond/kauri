@@ -9,4 +9,3 @@ Get help list
     ${res}=    Run And Return Rc    diff ../expect/get-help-list.txt ../outpur/get-help-list.txt
     LOG    ${res}
     Should Be Equal As Integers    ${res}    0
-    #获取系统配置的帮助主题／业务分类列表#
